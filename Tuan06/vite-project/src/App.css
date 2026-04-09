@@ -1,0 +1,241 @@
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  background: #f4f6fb;
+  color: #1f2937;
+}
+
+.sidebar {
+  border-right: 1px solid #e5e7eb;
+  background: #111827;
+  color: #e5e7eb;
+  padding: 24px;
+}
+
+.sidebar h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.sidebar p {
+  margin: 10px 0 20px;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.lesson-nav {
+  display: grid;
+  gap: 8px;
+}
+
+.lesson-nav button {
+  border: 1px solid #374151;
+  background: #1f2937;
+  color: #d1d5db;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.lesson-nav button.active {
+  background: #f43f5e;
+  border-color: #f43f5e;
+  color: #fff;
+}
+
+.content {
+  padding: 28px;
+}
+
+.exercise-block {
+  display: grid;
+  gap: 16px;
+}
+
+.exercise-block h2 {
+  margin: 0;
+}
+
+.exercise-block > p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.demo-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+}
+
+.demo-card h3,
+.demo-card h4 {
+  margin: 0 0 10px;
+}
+
+.big-number {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.grid.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.row.between {
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-sm {
+  gap: 8px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: #f43f5e;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #6b7280;
+}
+
+button.danger {
+  background: #dc2626;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+.list-plain,
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.todo-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.status {
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.status.loading {
+  color: #2563eb;
+}
+
+.status.error {
+  color: #dc2626;
+}
+
+.toast-stack {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.toast {
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #fff;
+  background: #374151;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.toast.success {
+  background: #16a34a;
+}
+
+.toast.info {
+  background: #2563eb;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.product-card h4 {
+  min-height: 48px;
+}
+
+.theme-preview[data-theme-mode] {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  background: #ffffff;
+}
+
+[data-theme-demo='dark'] .theme-preview[data-theme-mode] {
+  background: #111827;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+[data-theme-demo='dark'] .theme-preview .demo-card {
+  background: #1f2937;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+@media (max-width: 1024px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid #374151;
+  }
+
+  .grid.two-col,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 16px;
+  }
+}

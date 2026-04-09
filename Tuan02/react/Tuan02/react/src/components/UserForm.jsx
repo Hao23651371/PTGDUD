@@ -3,7 +3,6 @@ import { useState } from "react";
 function UserForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
- const [sdt,setSdt] = useState("");
 
   return (
     <div>
@@ -17,10 +16,7 @@ function UserForm() {
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-      <div>
-        <label >Sdt: </label>
-        <input type="text" value={sdt} onChange={(e) => setSdt(e.target.value)} />
-      </div>
+
       <div>
         <label>Email: </label>
         <input
@@ -33,11 +29,10 @@ function UserForm() {
       <hr />
 
       <h3>Dữ liệu bạn đang nhập:</h3>
-      <p> Tên: {name}</p>
-      <p> Email: {email}</p>
+      <p>👤 Tên: {name}</p>
+      <p>📧 Email: {email}</p>
     </div>
   );
-  
 }
 
 export default UserForm;
